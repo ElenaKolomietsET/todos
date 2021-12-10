@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../src/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <title>*_*</title>
+  </head>
+  <body>
+     
+      <div id="root"></div>
+     <script type="text/babel" >
+class Btn_all extends React.Component{
+
+  render(){
+    return <button>All</button>;
+  }
+  
+}
+
+class  ItemTasks extends React.Component {
+
+  render() {
+    handleClick = () => {
+    return <Btn_all />
+  }
+
+    return (
+      <React.Fragment>
+        <h3>Todos</h3>
+      <div className='wrapper'>
+        <div className="wrapper_title "> 
+          <img src="../2128.png" className="icon_title"/>
+        <input type="text" placeholder="What needs to be done?" className="daw_title"/> 
+        </div>
+
+
+<div className="item_wrapper">
+  <input className="item_checkbox" type="checkbox"/>
+  </div>
+  <div className="interfase_wrapper">
+    <span>4 itens left</span>
+    <Btn_all />
+    <span>Active</span>
+    <span>Completed</span>
+    <span>Clear conpleted</span>
+    </div>
+      </div>
+      </React.Fragment>
+    );
+  }
+}
+
+
+
+ReactDOM.render(
+  <ItemTasks  />,
+  document.getElementById('root')
+);
+
+     </script>
+
+   
+   
+  
+  </body>
+</html>
