@@ -47,7 +47,7 @@ h3{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   height: 58px;
-  display: none;
+
 }
 
 .daw_title{
@@ -55,7 +55,4 @@ h3{
   height: 90%;
   outline: none;
 border: none;
-}
-.interfase_wrapper{
-
 }

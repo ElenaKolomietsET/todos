@@ -32,13 +32,22 @@ class Btn_all extends React.Component{
   
 }
 
+
+const items = [
+  {
+  value: "fff",
+}
+]
+
+  const blokItems = items.map((items, index) =>
+  // Делайте так, только если у элементов массива нет заданного ID
+  <p key={index}>
+    {items.value}
+  </p>
+);
 class  ItemTasks extends React.Component {
 
   render() {
-    handleClick = () => {
-    return <Btn_all />
-  }
-
     return (
       <React.Fragment>
         <h3>Todos</h3>
@@ -48,10 +57,16 @@ class  ItemTasks extends React.Component {
         <input type="text" placeholder="What needs to be done?" className="daw_title"/> 
         </div>
 
+       <div>
+        <input type="checkbox" />
+        {blokItems}
+        </div>
+        
 
-<div className="item_wrapper">
-  <input className="item_checkbox" type="checkbox"/>
-  </div>
+
+
+ 
+  
   <div className="interfase_wrapper">
     <span>4 itens left</span>
     <Btn_all />
@@ -63,12 +78,14 @@ class  ItemTasks extends React.Component {
       </React.Fragment>
     );
   }
-}
+  }
+
 
 
 
 ReactDOM.render(
   <ItemTasks  />,
+  
   document.getElementById('root')
 );
 
